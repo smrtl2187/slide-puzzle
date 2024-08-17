@@ -47,8 +47,6 @@ Suggested creating a tile class and gave examples of how use class to swap
 TA Kyle & Louis:
 Answered clarifying questions on the assignment requirements
 
-Classmates: Ruochen Liu, Junwhoo Rho, and Evan Zhang helped with debugging and general advice
-
 Consulted Python Framework for turtle graphics:
 https://docs.python.org/3/library/turtle.html
 
