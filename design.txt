@@ -1,0 +1,72 @@
+'''
+	CS5001
+	Fall 2022
+	Final Project: Slide Puzzle
+	Stephanie Mortel
+	Design Comments
+	
+'''
+
+---- Overview: ----
+
+The main goal of my project is to make the game playable and the main approach was experimental. As I had gathered many different ideas from classmates, TAs, and the internet, I was not entirely certain what the best path forward would be for me personally. Through this project, I learned more about the gaps in my knowledge and the different ways different people approach programming.
+
+Notes:
+Upon play testing, 30% of the time: solved_puzzle is not recognized as a global variable for the load button function. Possible solution when play testing is to click reset and then load again. This should eventually work and successfully execute the load function 99% of the time.
+
+Game works better when clicking slowly (~1 sec in between clicks) and waiting for the program to execute an action after clicking.
+
+The game should work properly most of the time, otherwise try running the program several times as it does not run consistently.
+
+
+---- Design: ----
+
+This program leans heavily on procedural programming though I did included some minimal object-oriented program. I decided to use a tile class in order to create and position the puzzle tiles on the board, as well as to hide them and swap images.
+
+The bulk of time expended on this project was in creating a 2D array of the tiles and figuring out how to successfully swap the images, meaning the first tile in the top left corner of the board was labeled as a relative (0, 0) position. Rows moving down are numbered 0 to n, n being the square root of total number of puzzle tiles. Likewise for columns, moving left to right. This allowed me to only hardcode the starting coordinates and not have to keep track of all (x, y) coordinates of user clicks.
+
+Therefore, for all user clicks, I used nested functions in order to return the object that was clicked and have it perform some function. This was used for swapping tiles as well as the game buttons (reset, load, quit).
+
+
+---- Citations/References/Shoutouts ----
+
+TA Jonathan: 
+Discussed overview of how to approach creating and setting up tiles
+Suggested making a tile class and a 2D array of tile objects for less calculations to write
+	
+TA Leaksmy:
+Helped me iterate through 2D array which I was struggling to use in order to successfully create tiles and place them on the board
+
+TA Yi:
+Helped me write the win condition function in the program
+Helped explain where win/lose conditions and leaderboard updates should be in the structure of the program I wrote
+
+TA Jarred:
+Suggested creating a tile class and gave examples of how use class to swap
+
+TA Kyle & Louis:
+Answered clarifying questions on the assignment requirements
+
+Classmates: Ruochen Liu, Junwhoo Rho, and Evan Zhang helped with debugging and general advice
+
+Consulted Python Framework for turtle graphics:
+https://docs.python.org/3/library/turtle.html
+
+Consulted StackOverflow for how to use object-oriented interface of turtle:
+https://stackoverflow.com/questions/62225916/whats-the-difference-between-from-turtle-import-and-import-turtle
+https://stackoverflow.com/questions/68360469/is-there-a-way-to-make-turtle-graphics-object-oriented
+
+Consulted StackOverflow for path directory:
+https://stackoverflow.com/questions/7165749/open-file-in-a-relative-location-in-python
+        
+Referenced Youtube video for info on splash screen:
+https://www.youtube.com/watch?v=Wk37sCX5xTY&ab_channel=TokyoEdtech
+
+How to initialize multiple Turtles:
+https://stackoverflow.com/questions/33767122/how-to-initialize-multiple-turtles-in-python-with-classes
+
+Referenced example of how to use 2D array for a 15-puzzle:
+https://compucademy.net/the-15-puzzle-with-python-turtle-graphics/
+
+How to get list of files from directory path:
+https://softhints.com/python-simple-ways-list-files-folder/
